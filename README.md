@@ -6,7 +6,27 @@ In this module, you’ll learn how to use the Extract, Transform, Load (ETL) pro
 
 ## Challenge Overview
 
-In this challenge, you will write a Python script that performs all three ETL steps on the Wikipedia and Kaggle data. To complete this task, you can use the code you created in your Jupyter Notebook, but don’t just copy and paste! You’ll need to leave out any code that performs exploratory data analysis, and you may need to add code to handle potentially unforeseen errors due to changes in the underlying data.
+1. In order to build a function and automate the ETL process for the challenge, we made the following assumptions:
+
+ - The updated data will stay in the same formats:
+
+2. We're creating a function that will extract, transform and load updated csv files if, and only if, the new data is in the same format as the intial datasets. We know that there is a possibility for the data structure to change overtime and early data inspection of new files will be crucial.
+There is competing data between the different datasets. Based on observed patterns, we have built a system to transform for the best possible outcome:
+
+  - We're assuming that the future datasets will follow the same pattern as the initialone.
+
+3. We're dropping rows with corrupted data when two movies got merged based on release date filtering:
+
+  -We're assuming that the time range we have selected based on our intial dataser will help us catch and drop outliers from dataset, without deleting good data.
+We're dropping columns with only one value:
+
+4. We're dropping columns with only one value: 
+ 
+ -We added an exception to print "No columns to drop because of only one value" if this happens with the new dataset. We want the function to keep running withour errors.
+
+5. New updated files will be included in the section "Declaring new files to upload":
+
+  -To allow the function to run properly, files have to be inputted in the right place.
 
 ## Challenge Summary
 ### Documented Assumptions:

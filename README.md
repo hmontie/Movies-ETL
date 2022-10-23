@@ -17,16 +17,16 @@ There is competing data between the different datasets. Based on observed patter
 
 3. We're dropping rows with corrupted data when two movies got merged based on release date filtering:
 
-  -We're assuming that the time range we have selected based on our intial dataser will help us catch and drop outliers from dataset, without deleting good data.
+  - We're assuming that the time range we have selected based on our intial dataser will help us catch and drop outliers from dataset, without deleting good data.
 We're dropping columns with only one value:
 
 4. We're dropping columns with only one value: 
  
- -We added an exception to print "No columns to drop because of only one value" if this happens with the new dataset. We want the function to keep running withour errors.
+ - We added an exception to print "No columns to drop because of only one value" if this happens with the new dataset. We want the function to keep running withour errors.
 
 5. New updated files will be included in the section "Declaring new files to upload":
 
-  -To allow the function to run properly, files have to be inputted in the right place.
+  - To allow the function to run properly, files have to be inputted in the right place.
 
 ## Challenge Summary
 ### Documented Assumptions:
